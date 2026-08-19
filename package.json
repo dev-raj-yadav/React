@@ -1,0 +1,33 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is React By Dev Raj",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-raj-yadav/React.git"
+  },
+  "keywords": [
+    "react",
+    "dev",
+    "raj"
+  ],
+  "author": "Dev Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-raj-yadav/React/issues"
+  },
+  "homepage": "https://github.com/dev-raj-yadav/React#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "browserslist":[
+    "last 2 version"
+  ]
+}
