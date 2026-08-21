@@ -1,46 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQEVqSZRsb-Z3mo1DQvVZvB_EkRbWH_s5fKgty94VKmg&s=10"
-        />
-      </div>
-      <div className="nav-items">
-        <ul className="items">
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contact us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-const styleCard = {
-  backgroundColor: "#f0f0f0",
-};
-
-const RestaurantCard = (props) => {
-  
-  const { name, cuisines, rating, costForTwo, deliveryTime,image } = props?.resData ;
-
-  return (
-    <div className="res-card" style={styleCard}>
-      <img className="res-logo" src={image} />
-      <h3>{name}</h3>
-      <h4>{cuisines?.join(", ")}</h4>
-      <h4>{rating} stars</h4>
-      <h4>{costForTwo}</h4>
-      <h4>{deliveryTime} minutes</h4>
-    </div>
-  );
-};
-
 const resObj = [
   {
     id: "res001",
@@ -72,7 +29,7 @@ const resObj = [
     id: "res003",
     name: "Burger King",
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
-    rating: 4.2,
+    rating: 3.9,
     deliveryTime: "20-25 mins",
     costForTwo: "₹300 for two",
     cuisines: ["Burgers", "American", "Fast Food"],
@@ -85,8 +42,8 @@ const resObj = [
     id: "res004",
     name: "Domino's Pizza",
     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
-    rating: 4.5,
-    deliveryTime: "25-30 mins",
+    rating: 3.0,
+    deliveryTime: "25-30 mins", 
     costForTwo: "₹400 for two",
     cuisines: ["Pizza", "Italian", "Beverages"],
     location: "BTM Layout",
@@ -121,30 +78,4 @@ const resObj = [
   },
 ];
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-
-      <div className="res-container">
-        {resObj.map((restaurant) => (
-          <RestaurantCard  key={restaurant.id} resData={restaurant} />
-        ))}   
-      </div>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+export default resObj;
