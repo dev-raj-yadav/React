@@ -1,12 +1,12 @@
 # React 🚀
 
-# Parcel
+  # Parcel
 - Dev Build
 - Local Server
 - HMR -Hot Model Replacement
 - File Watching Algorithm
 - Caching - Faster Builds
-- Image Optimization
+- Image Optimization 
 - Minification 
 - Bundling 
 - Compressing
