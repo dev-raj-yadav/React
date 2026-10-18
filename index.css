@@ -82,3 +82,11 @@ object-fit: cover;
 .filter{
     display: flex;
 }
+
+.user-card{
+    padding:10px;
+     
+    height: min-content;
+    width: min-content;
+    border: 1px solid black;
+}

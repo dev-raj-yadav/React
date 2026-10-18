@@ -46,3 +46,7 @@ Two types of Export/Import
 # React Hooks
 - useState() - Superpowerful State Variables in  react
 - useEffect()
+
+# 2 Types of Routing
+- Client Side Routing
+- Server Side Routing
