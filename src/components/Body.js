@@ -50,24 +50,23 @@ if(onlineStatus=== false) return <h1>Looks like you are offline please check you
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search" >
-          
+      <div className="flex">
+        <div className="flex" >
           <input 
             placeholder="Search"
             type="text"
-            className="search-box"
+            className=" p-4 m-4 border border-solid border-black"
             value={searchText} onChange={(e)=>{
               setSearchText(e.target.value);
             }}
           />{" "}
-        </div>
-        <button className="search-btn" onClick={()=>{console.log(searchText)  //Filter the  restruant cards and update the UI
-
+          <button className="px-4 bg-green-100 m-4 rounded-lg" onClick={()=>{console.log(searchText)  //Filter the  restruant cards and update the UI
           const filteredRestaurant=listOfRestaurant.filter((res)=>res.info.name.toLowerCase().includes(searchText));  setFilteredRestraunt(filteredRestaurant)}}>Search</button>
+        </div>
+        
         <button
-          className="filter-btn"
-          onClick={() => {
+          className="bg-gray-100 px-4 m-4 rounded-lg"
+          onClick={() => { 
             const filteredList = listOfRestaurant.filter(
               (res) => res.info.avgRating > 4,
             ); 
@@ -79,7 +78,7 @@ if(onlineStatus=== false) return <h1>Looks like you are offline please check you
         </button>
       </div>
 
-      <div className="res-container">
+      <div className="flex flex-wrap gap-4  p-4 m-1">
         {filteredRestaurant.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant.info} />
         ))}
